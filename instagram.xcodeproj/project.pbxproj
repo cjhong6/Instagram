@@ -13,6 +13,8 @@
 		A48785662150A44600C9280F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A48785652150A44600C9280F /* Assets.xcassets */; };
 		A48785692150A44600C9280F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A48785672150A44600C9280F /* LaunchScreen.storyboard */; };
 		A48785732150A7FF00C9280F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48785722150A7FF00C9280F /* LoginViewController.swift */; };
+		A487857521520EA800C9280F /* uploadImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A487857421520EA800C9280F /* uploadImageViewController.swift */; };
+		A48785772153453500C9280F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48785762153453500C9280F /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		A48785682150A44600C9280F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A487856A2150A44600C9280F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A48785722150A7FF00C9280F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A487857421520EA800C9280F /* uploadImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = uploadImageViewController.swift; sourceTree = "<group>"; };
+		A48785762153453500C9280F /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,8 @@
 				A48785672150A44600C9280F /* LaunchScreen.storyboard */,
 				A487856A2150A44600C9280F /* Info.plist */,
 				A48785722150A7FF00C9280F /* LoginViewController.swift */,
+				A487857421520EA800C9280F /* uploadImageViewController.swift */,
+				A48785762153453500C9280F /* Post.swift */,
 			);
 			path = instagram;
 			sourceTree = "<group>";
@@ -221,7 +227,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A48785732150A7FF00C9280F /* LoginViewController.swift in Sources */,
+				A487857521520EA800C9280F /* uploadImageViewController.swift in Sources */,
 				A487855F2150A44600C9280F /* AppDelegate.swift in Sources */,
+				A48785772153453500C9280F /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
