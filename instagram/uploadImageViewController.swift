@@ -21,14 +21,11 @@ class uploadImageViewController: UIViewController, UIImagePickerControllerDelega
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     //Implement the delegate method
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [String : Any]) {
-        //set the image captured by the UIImagePickerController
-        //uploadImage.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         //Parse has a limit of 10MB for uploading photos so you'll want to the code snippet below to resize the image before uploading to Parse.
        uploadImage.image = info[UIImagePickerControllerEditedImage] as! UIImage?
         
@@ -52,19 +49,36 @@ class uploadImageViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     @IBAction func onUpload(_ sender: Any) {
-        Post.postUserImage(image: uploadImage.image, withCaption: captionField.text)
-        
-        self.alertController = UIAlertController(title: "Success", message: "Image Successfully Uploaded", preferredStyle: .alert)
-        let cancelAction = UIAlertAction(title: "Ok", style: .cancel) { (action) in
-            // handle cancel response here. Doing nothing will dismiss the view.
-        }
-        self.alertController.addAction(cancelAction)
-        DispatchQueue.global().async(execute: {
-            DispatchQueue.main.sync{
-                self.present(self.alertController, animated: true, completion: nil)
-                
+        Post.postUserImage(image: uploadImage.image, withCaption: captionField.text, withCompletion: (block: { (success, error) in
+            if (success) {
+                self.alertController = UIAlertController(title: "Success", message: "Image Successfully Uploaded", preferredStyle: .alert)
+                let cancelAction = UIAlertAction(title: "Ok", style: .cancel) { (action) in
+                    // handle cancel response here. Doing nothing will dismiss the view.
+                }
+                self.alertController.addAction(cancelAction)
+                DispatchQueue.global().async(execute: {
+                    DispatchQueue.main.sync{
+                        self.present(self.alertController, animated: true, completion: nil)
+                        
+                    }
+                })
+            } else {
+                // There was a problem, check error.description
+                self.alertController = UIAlertController(title: "Error", message: "\(error?.localizedDescription)", preferredStyle: .alert)
+                let cancelAction = UIAlertAction(title: "Ok", style: .cancel) { (action) in
+                    // handle cancel response here. Doing nothing will dismiss the view.
+                }
+                self.alertController.addAction(cancelAction)
+                DispatchQueue.global().async(execute: {
+                    DispatchQueue.main.sync{
+                        self.present(self.alertController, animated: true, completion: nil)
+                        
+                    }
+                })
             }
-        })
+        }))
+        
+
     }
 
 }

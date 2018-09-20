@@ -21,7 +21,7 @@ class Post: PFObject, PFSubclassing {
         return "Post"
     }
     
-    class func postUserImage(image: UIImage?, withCaption caption: String?) {
+    class func postUserImage(image: UIImage?, withCaption caption: String?, withCompletion completion: PFBooleanResultBlock?) {
         // use subclass approach
         let post = Post()
         
@@ -33,14 +33,7 @@ class Post: PFObject, PFSubclassing {
         post.commentCount = 0
         
         // Save object (following function will save the object in Parse asynchronously)
-        //post.saveInBackground(block: completion)
-        post.saveInBackground(block: { (success, error) in
-            if let error = error {
-                print(error.localizedDescription)
-            }else {
-                print("Image uploaded")
-            }
-        })
+        post.saveInBackground(block: completion)
     }
     
     class func getPFFileFromImage(image: UIImage?) -> PFFile? {
