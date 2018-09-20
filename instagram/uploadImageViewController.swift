@@ -13,6 +13,7 @@ class uploadImageViewController: UIViewController, UIImagePickerControllerDelega
     
     @IBOutlet weak var uploadImage: UIImageView!
     @IBOutlet weak var captionField: UITextField!
+    var alertController = UIAlertController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +53,18 @@ class uploadImageViewController: UIViewController, UIImagePickerControllerDelega
     
     @IBAction func onUpload(_ sender: Any) {
         Post.postUserImage(image: uploadImage.image, withCaption: captionField.text)
+        
+        self.alertController = UIAlertController(title: "Success", message: "Image Successfully Uploaded", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Ok", style: .cancel) { (action) in
+            // handle cancel response here. Doing nothing will dismiss the view.
+        }
+        self.alertController.addAction(cancelAction)
+        DispatchQueue.global().async(execute: {
+            DispatchQueue.main.sync{
+                self.present(self.alertController, animated: true, completion: nil)
+                
+            }
+        })
     }
 
 }
