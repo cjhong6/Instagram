@@ -69,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4629" y="36"/>
+            <point key="canvasLocation" x="2158" y="-777"/>
         </scene>
         <!--Photo-->
         <scene sceneID="8UV-g0-8ly">
@@ -131,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WUu-SH-rq4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2354" y="968"/>
+            <point key="canvasLocation" x="3078" y="968"/>
         </scene>
         <!--Profile-->
         <scene sceneID="ykR-Xi-p0h">
@@ -164,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FzV-7X-ojS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4628.985507246377" y="967.66304347826099"/>
+            <point key="canvasLocation" x="4832" y="968"/>
         </scene>
         <!--Capture-->
         <scene sceneID="5zt-cu-1Ws">
@@ -183,7 +183,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ALb-k6-Vhp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1551" y="968"/>
+            <point key="canvasLocation" x="2159" y="968"/>
         </scene>
         <!--Instagram-->
         <scene sceneID="z8j-pd-010">
@@ -202,7 +202,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="278" id="amk-4U-1fx" customClass="PostTableViewCell" customModule="instagram" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="278" id="amk-4U-1fx" customClass="PostTableViewCell" customModule="instagram" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="278"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="amk-4U-1fx" id="4cL-IT-cjy">
@@ -242,6 +242,7 @@
                                             <outlet property="captionLabel" destination="ToC-5r-pAY" id="UoR-ZX-OXN"/>
                                             <outlet property="photoView" destination="90u-cB-tVF" id="hhJ-pJ-E6D"/>
                                             <outlet property="timestampLabel" destination="XcD-Rv-oHN" id="A5I-DU-pJR"/>
+                                            <segue destination="u33-1F-g8f" kind="show" id="q4S-D7-xn4"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -257,6 +258,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ic-nv-Hy4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="504" y="968"/>
+        </scene>
+        <!--Post Detail View Controller-->
+        <scene sceneID="IU9-Mu-Cde">
+            <objects>
+                <viewController id="u33-1F-g8f" customClass="PostDetailViewController" customModule="instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xKJ-5D-wUR"/>
+                        <viewControllerLayoutGuide type="bottom" id="6xg-ef-LzV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lnz-81-4MI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kpI-ZK-S3p" customClass="PFImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="546"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Timestamp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zez-2I-5Bu">
+                                <rect key="frame" x="11" y="554" width="86" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Caption" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Car-JB-4qL">
+                                <rect key="frame" x="11" y="583" width="60" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="captionLabel" destination="Car-JB-4qL" id="9hb-NR-1WG"/>
+                        <outlet property="postImageView" destination="kpI-ZK-S3p" id="kMR-3e-T4X"/>
+                        <outlet property="timeLabel" destination="zez-2I-5Bu" id="RXb-oV-NAa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6qX-jf-b1d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1262.3188405797102" y="967.66304347826099"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ESY-RS-n0C">
@@ -276,7 +321,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zeu-rC-K0l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1261" y="151"/>
+            <point key="canvasLocation" x="2158" y="82"/>
         </scene>
         <!--Home-->
         <scene sceneID="Yee-Dg-XMu">
@@ -314,7 +359,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0tU-ba-mSm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3721.739130434783" y="967.66304347826099"/>
+            <point key="canvasLocation" x="4003" y="968"/>
         </scene>
     </scenes>
     <resources>
