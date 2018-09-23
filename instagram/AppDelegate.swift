@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // check if user is logged in.
         if PFUser.current() != nil {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            // view controller currently being set in Storyboard as default will be overridden
+            // set tab bar id in side storyboard
             window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "Home")
 
         }

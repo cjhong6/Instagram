@@ -71,7 +71,7 @@
             </objects>
             <point key="canvasLocation" x="-312" y="-405"/>
         </scene>
-        <!--Capture-->
+        <!--Photo-->
         <scene sceneID="8UV-g0-8ly">
             <objects>
                 <viewController id="98a-v2-dBg" customClass="uploadImageViewController" customModule="instagram" customModuleProvider="target" sceneMemberID="viewController">
@@ -123,7 +123,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Capture" id="KNz-3F-ZdX"/>
+                    <navigationItem key="navigationItem" title="Photo" id="KNz-3F-ZdX"/>
                     <connections>
                         <outlet property="captionField" destination="sVW-6b-7Jb" id="ZTQ-Uj-920"/>
                         <outlet property="uploadImage" destination="64g-As-f62" id="XLT-rE-Txj"/>
@@ -152,7 +152,7 @@
             </objects>
             <point key="canvasLocation" x="2681.1594202898555" y="967.66304347826099"/>
         </scene>
-        <!--Home Feed-->
+        <!--Instagram-->
         <scene sceneID="z8j-pd-010">
             <objects>
                 <viewController id="1Jt-2M-zrC" customClass="HomeFeedViewController" customModule="instagram" customModuleProvider="target" sceneMemberID="viewController">
@@ -216,7 +216,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Home Feed" id="Oya-cR-TXP"/>
+                    <navigationItem key="navigationItem" title="Instagram" id="Oya-cR-TXP"/>
                     <connections>
                         <outlet property="tableView" destination="slf-uj-yOd" id="pyy-UR-OrU"/>
                     </connections>
