@@ -22,6 +22,7 @@ class Post: PFObject, PFSubclassing {
     }
     
     class func postUserImage(image: UIImage?, withCaption caption: String?, withCompletion completion: PFBooleanResultBlock?) {
+        
         // use subclass approach
         let post = Post()
         
