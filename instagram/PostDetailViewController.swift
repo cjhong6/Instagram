@@ -21,9 +21,12 @@ class PostDetailViewController: UIViewController {
         super.viewDidLoad()
 
         if let post = post {
-            if let pastDate = (post.createdAt){
-                timeLabel.text = pastDate.timeAgoDisplay()
-            }
+            
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MMM-dd"
+            let myString = formatter.string(from: post.createdAt!)
+            timeLabel.text = myString
+            
             captionLabel.text = post["caption"] as! String?
             postImageView.file = post["media"] as? PFFile
             postImageView.loadInBackground()
