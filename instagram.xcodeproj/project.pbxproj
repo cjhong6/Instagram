@@ -18,6 +18,7 @@
 		A48785772153453500C9280F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48785762153453500C9280F /* Post.swift */; };
 		A4D9FB16215755E20047DB28 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D9FB15215755E20047DB28 /* PostTableViewCell.swift */; };
 		A4D9FB1B21575D960047DB28 /* Showtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D9FB1A21575D960047DB28 /* Showtime.swift */; };
+		A4D9FB1D21576E9D0047DB28 /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D9FB1C21576E9D0047DB28 /* LogoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		A48785762153453500C9280F /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		A4D9FB15215755E20047DB28 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		A4D9FB1A21575D960047DB28 /* Showtime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Showtime.swift; sourceTree = "<group>"; };
+		A4D9FB1C21576E9D0047DB28 /* LogoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				A48785722150A7FF00C9280F /* LoginViewController.swift */,
+				A4D9FB1C21576E9D0047DB28 /* LogoutViewController.swift */,
 				A487857421520EA800C9280F /* uploadImageViewController.swift */,
 				A47ADCFD2154BDF8003AF6E0 /* HomeFeedViewController.swift */,
 			);
@@ -269,6 +272,7 @@
 				A487855F2150A44600C9280F /* AppDelegate.swift in Sources */,
 				A48785772153453500C9280F /* Post.swift in Sources */,
 				A47ADCFE2154BDF8003AF6E0 /* HomeFeedViewController.swift in Sources */,
+				A4D9FB1D21576E9D0047DB28 /* LogoutViewController.swift in Sources */,
 				A4D9FB16215755E20047DB28 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
