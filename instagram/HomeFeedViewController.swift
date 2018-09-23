@@ -46,7 +46,7 @@ class HomeFeedViewController: UIViewController,UITableViewDataSource {
     func fetchPost(){
         MBProgressHUD.showAdded(to: self.view, animated: true)
         let query = Post.query()
-        query?.order(byAscending: "createAt")
+        query?.order(byDescending: "createdAt")
         query?.includeKey("author")
         query?.limit = 20
         
